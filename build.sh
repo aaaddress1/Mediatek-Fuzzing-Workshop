@@ -7,5 +7,5 @@ if [ ! -d "AFLplusplus" ]; then
 fi
 
 cp llvm-pass/* AFLplusplus/instrumentation
-make -C AFLplusplus
-make -C target
+make -C AFLplusplus LLVM_CONFIG=llvm-config-12
+make -C target LLVM_CONFIG=llvm-config-12
